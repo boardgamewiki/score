@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جدول رده بندی مسابقه شکار گنج اینستاگرامی</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
+    <link rel="stylesheet" href="./plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <style>
+        @font-face {
+            font-family: IRANSans;
+            font-style: normal;
+            font-weight: 900;
+            src: url('./plugins/fonts/eot/IRANSansWeb(FaNum)_Black.eot');
+            src: url('./plugins/fonts/eot/IRANSansWeb(FaNum)_Black.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+            url('./plugins/fonts/woff2/IRANSansWeb(FaNum)_Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+            url('./plugins/fonts/woff/IRANSansWeb(FaNum)_Black.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+            url('./plugins/fonts/ttf/IRANSansWeb(FaNum)_Black.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: IRANSans;
+            font-style: normal;
+            font-weight: bold;
+            src: url('./plugins/fonts/eot/IRANSansWeb(FaNum)_Bold.eot');
+            src: url('./plugins/fonts/eot/IRANSansWeb(FaNum)_Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+            url('./plugins/fonts/woff2/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+            url('./plugins/fonts/woff/IRANSansWeb(FaNum)_Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+            url('./plugins/fonts/ttf/IRANSansWeb(FaNum)_Bold.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: IRANSans;
+            font-style: normal;
+            font-weight: 500;
+            src: url('./plugins/fonts/eot/IRANSansWeb(FaNum)_Medium.eot');
+            src: url('./plugins/fonts/eot/IRANSansWeb(FaNum)_Medium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+            url('./plugins/fonts/woff2/IRANSansWeb(FaNum)_Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+            url('./plugins/fonts/woff/IRANSansWeb(FaNum)_Medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+            url('./plugins/fonts/ttf/IRANSansWeb(FaNum)_Medium.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: IRANSans;
+            font-style: normal;
+            font-weight: 300;
+            src: url('./plugins/fonts/eot/IRANSansWeb(FaNum)_Light.eot');
+            src: url('./plugins/fonts/eot/IRANSansWeb(FaNum)_Light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+            url('./plugins/fonts/woff2/IRANSansWeb(FaNum)_Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+            url('./plugins/fonts/woff/IRANSansWeb(FaNum)_Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+            url('./plugins/fonts/ttf/IRANSansWeb(FaNum)_Light.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: IRANSans;
+            font-style: normal;
+            font-weight: 200;
+            src: url('./plugins/fonts/eot/IRANSansWeb(FaNum)_UltraLight.eot');
+            src: url('./plugins/fonts/eot/IRANSansWeb(FaNum)_UltraLight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+            url('./plugins/fonts/woff2/IRANSansWeb(FaNum)_UltraLight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+            url('./plugins/fonts/woff/IRANSansWeb(FaNum)_UltraLight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+            url('./plugins/fonts/ttf/IRANSansWeb(FaNum)_UltraLight.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: IRANSans;
+            font-style: normal;
+            font-weight: normal;
+            src: url('./plugins/fonts/eot/IRANSansWeb(FaNum).eot');
+            src: url('./plugins/fonts/eot/IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+            url('./plugins/fonts/woff2/IRANSansWeb(FaNum).woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+            url('./plugins/fonts/woff/IRANSansWeb(FaNum).woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+            url('./plugins/fonts/ttf/IRANSansWeb(FaNum).ttf') format('truetype');
+        } /* لینک فایلی که وظیفه بارگذاری فونت ها را برعهده دارد */
+        body{
+            font-family: IRANSans, sans-serif !important;
+            padding: 0 !important;
+            background-image: url("./images/back.jpg");
+            background-repeat: no-repeat  !important;
+            background-position: center  !important;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            direction: rtl;
+        }
+    </style>
+</head>
+<body>
+<div class="text-center mt-5">
+    <div class="card text-center" style="width: 90%; display: inline-block;">
+        <div class="card-header">
+            جدول رده بندی مسابقه شکار گنج اینستاگرامی
+        </div>
+
+        <div class="my-2">
+            <input type="button" class="btn btn-primary" value="بارگزاری فایل اکسل" onclick="uploadExcelFile()">
+            <input type="file" class="form-control-file" name="excelfile" id="excelfile" aria-describedby="fileHelp"
+                   style="display: none"/>
+        </div>
+
+        <div class="card-body text-center">
+            <div class="table-responsive-md mx-auto" style="width: 100%">
+                <table id="reports_datatable" class="table table-bordered table-striped responsive" style="text-align: center; width: 100%"></table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js" integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k" crossorigin="anonymous"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var excelFile = $("#excelfile");
+        excelFile.change(
+            function (e) {
+                handleFile(e);
+            }
+        );
+    });
+
+    function initialize_dataTable(data, columns) {
+        $('#reports_datatable').DataTable(
+            {
+                data: data,
+                "bDestroy": true,
+                responsive:true,
+                columns: columns,
+                "order": [[ 14, "desc" ]],
+                language: {
+                    "decimal": "",
+                    "emptyTable": "رکوردی برای نمایش وجود ندارد",
+                    "info": "نمایش _START_ تا _END_ از _TOTAL_ رکورد",
+                    "infoEmpty": "نمایش 0 تا از 0 رکورد",
+                    "infoFiltered": "",
+                    "infoPostFix": "",
+                    "thousands": ",",
+                    "lengthMenu": "نمایش _MENU_ رکورد",
+                    "loadingRecords": "Loading...",
+                    "processing": "Processing...",
+                    "search": "جستجو: ",
+                    "zeroRecords": "اطلاعاتی یافت نشد",
+                    "paginate": {
+                        "first": "First",
+                        "last": "Last",
+                        "next": "بعدی",
+                        "previous": "قبلی"
+                    },
+                    "aria": {
+                        "sortAscending": ": activate to sort column ascending",
+                        "sortDescending": ": activate to sort column descending"
+                    }
+                },
+                "info": false,
+            });
+    }
+
+    function handleFile(e) {
+        if ($("#excelfile").val().toLowerCase().indexOf(".xlsx") <= 0) {
+            alert("فایل انتخاب شده صحیح نمی باشد. لطفا فایل Excel با فرمت xlsx. انتخاب کنید و توجه داشته باشید که نام فایل شما فقط می تواند شاما حروف لاتین و اعداد باشد.");
+            return;
+        }
+        var files = e.target.files, f = files[0];
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            var data = new Uint8Array(e.target.result);
+            var workbook = XLSX.read(data, {type: 'array'});
+
+            /* DO SOMETHING WITH workbook HERE */
+            var sheetCounter = 0;
+            var sheet_name_list = workbook.SheetNames;
+            var exceljson;
+            sheet_name_list.forEach(function (y) {
+                exceljson = XLSX.utils.sheet_to_json(workbook.Sheets[y]);
+                if (exceljson.length > 0 && sheetCounter === 0) {
+                    fill_dataTable(exceljson);
+                    sheetCounter++;
+                }
+            });
+        };
+        reader.readAsArrayBuffer(f);
+    }
+
+    function fill_dataTable(exceljson) {
+        var col1 = "نام کاربری اینستاگرام";
+        var col2 = "امتیاز سوال اول";
+        var col3 = "امتیاز سوال دوم";
+        var col4 = "امتیاز سوال سوم";
+        var col5 = "امتیاز سوال چهارم";
+        var col6 = "امتیاز سوال پنجم";
+        var col7 = "امتیاز مرحله دوم";
+        var col8 = "امتیاز مرحله سوم";
+        var col9 = "امتیاز مرحله چهارم";
+        var col10 = "امتیاز مرحله پنجم";
+        var col11 = "امتیاز مرحله ششم";
+        var col12 = "امتیاز اضافی (منشن)";
+        var col13 = "امتیاز اضافی (استوری)";
+        var col14 = "امتیاز اضافی (فالو از طرف افرادی که منشن شده اند)";
+        var columns = [
+            {title: col1},
+            {title: col2},
+            {title: col3},
+            {title: col4},
+            {title: col5},
+            {title: col6},
+            {title: col7},
+            {title: col8},
+            {title: col9},
+            {title: col10},
+            {title: col11},
+            {title: col12},
+            {title: col13},
+            {title: col14},
+            {title: "مجموع امتیاز"},
+        ];
+        var data = [];
+        exceljson.forEach(row => {
+            data.push([
+                row[col1],
+                row[col2],
+                row[col3],
+                row[col4],
+                row[col5],
+                row[col6],
+                row[col7],
+                row[col8],
+                row[col9],
+                row[col10],
+                row[col11],
+                row[col12],
+                row[col13],
+                row[col14],
+                parseInt(row[col2]) + parseInt(row[col3]) + parseInt(row[col4]) + parseInt(row[col5]) + parseInt(row[col6]) + parseInt(row[col7]) + parseInt(row[col8]) + parseInt(row[col9]) + parseInt(row[col10]) + parseInt(row[col11]) + parseInt(row[col12]) + parseInt(row[col13]) + parseInt(row[col14])
+            ]);
+        });
+        initialize_dataTable(data, columns);
+    }
+
+    function uploadExcelFile() {
+        $("#excelfile").click();
+    }
+
+</script>
+
+</body>
+</html>
