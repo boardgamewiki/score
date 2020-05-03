@@ -110,12 +110,14 @@
 <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
 <script>
     $(document).ready(function () {
-        var excelFile = $("#excelfile");
-        excelFile.change(
-            function (e) {
-                handleFile(e);
-            }
-        );
+        var workbook = XLSX.readFile('table.xlsx');
+        console.log(workbook);
+//         var excelFile = $("#excelfile");
+//         excelFile.change(
+//             function (e) {
+//                 handleFile(e);
+//             }
+//         );
     });
 
     function initialize_dataTable(data, columns) {
